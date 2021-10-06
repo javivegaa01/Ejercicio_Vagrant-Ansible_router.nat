@@ -1,0 +1,4 @@
+ip_router: 10.0.0.1
+ip_cliente: 10.0.0.2
+mascara: 255.255.255.0
+

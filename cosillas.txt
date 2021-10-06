@@ -1,0 +1,12 @@
+[router]
+ip route replace default via 172.22.0.1
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source 172.22.4.24
+
+[cliente]
+ip route replace default via 10.0.0.1
+
+
+
+address
+

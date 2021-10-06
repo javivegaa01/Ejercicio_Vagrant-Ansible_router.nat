@@ -15,4 +15,5 @@ auto eth1
 iface eth1 inet static
       address {{ip_cliente}}
       netmask {{mascara}}
+      gateway {{ip_router}}
 #VAGRANT-END

@@ -1,10 +1,12 @@
-- name: Cambiar bit forward
-  - ansible.posix.sysctl:
-    name: net.ipv4.ip_forward
-    value: '1'
-    sysctl_set: yes
-- name: Configuracion router
-  copy:
-   src: /etc/network/interfaces
-   
-    
+#-name: Cambiar bit forward
+# ansible.posix.sysctl:
+#  name: net.ipv4.ip_forward
+#  value: '1'
+#  sysctl_set: yes
+#  state: present
+#  reload: yes
+#-name: Configuracion router
+# community.general.interfaces_file:
+#  dest: /etc/network/interfaces.d/eth1.cfg
+
+

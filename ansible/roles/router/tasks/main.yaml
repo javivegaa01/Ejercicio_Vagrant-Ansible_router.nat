@@ -1,12 +1,17 @@
-#-name: Cambiar bit forward
-# ansible.posix.sysctl:
-#  name: net.ipv4.ip_forward
-#  value: '1'
-#  sysctl_set: yes
-#  state: present
-#  reload: yes
-#-name: Configuracion router
-# community.general.interfaces_file:
-#  dest: /etc/network/interfaces.d/eth1.cfg
+- name: Añadiendo:Bit de forwarding
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: "1"
+    sysctl_set: yes
+
+- name: Cambiar la plantilla de network/interfaces
+  template:
+    src: interfaces
+    dest: /etc/network/interfaces
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - reiniciar maquina
 
 

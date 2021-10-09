@@ -1,10 +1,10 @@
-- name: Añadiendo clave pública ssh
-  template:
-    src: authorized_keys
-    dest: /home/vagrant/.ssh/authorized_keys
-    owner: vagrant
-    group: vagrant
-    mode: '0600'
+#- name: Añadiendo clave pública ssh
+#  template:
+#    src: authorized_keys
+#    dest: /home/vagrant/.ssh/authorized_keys
+#    owner: vagrant
+#    group: vagrant
+#    mode: '0600'
 - name: Añadiendo:Bit de forwarding
   sysctl:
     name: net.ipv4.ip_forward

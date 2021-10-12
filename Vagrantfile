@@ -25,4 +25,7 @@ Vagrant.configure("2") do |config|
                                    :libvirt__forward_mode => "veryisolated",
 				   :ip => "10.0.0.2"
 	end
+	config.vm.provision "ansible" do |ansible|
+		ansible.playbook="./ansible/site.yaml"
+	end
 end
